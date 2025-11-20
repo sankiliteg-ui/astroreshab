@@ -1,0 +1,1085 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rishabh Singh | Cosmic Blueprint & Destiny Guidance</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <style>
+        /* --- GLOBAL STYLES & CSS RESET --- */
+        :root {
+            --primary-color: #FFD700; /* Gold */
+            --secondary-color: #9370DB; /* Medium Purple */
+            --dark-bg: #02030b; /* Deep night */
+            --text-color: #f0f0f5;
+            --card-bg: #15152b; /* Slightly lighter card bg */
+            --font-family-body: 'Montserrat', sans-serif;
+            --font-family-heading: 'Playfair Display', serif;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            position: relative;
+            font-family: var(--font-family-body);
+            color: var(--text-color);
+            line-height: 1.6;
+            overflow-x: hidden;
+            background-color: var(--dark-bg);
+        }
+
+        /* --- TRANSPARENT STARDUST TEXTURE + TWINKLE --- */
+        .texture-stars {
+            position: fixed;
+            inset: 0;
+            pointer-events: none;
+            z-index: -1;
+            background-image: url("https://www.transparenttextures.com/patterns/stardust.png");
+            background-repeat: repeat;
+            background-size: auto;
+            opacity: 0.45;
+            animation: textureTwinkle 4.5s ease-in-out infinite alternate;
+        }
+
+        @keyframes textureTwinkle {
+            0% {
+                opacity: 0.32;
+                transform: scale(1);
+            }
+            50% {
+                opacity: 0.55;
+                transform: scale(1.02);
+            }
+            100% {
+                opacity: 0.38;
+                transform: scale(1);
+            }
+        }
+
+        /* --- FAST MOVING NIGHT SKY + GALAXY BACKGROUND --- */
+        body::before,
+        body::after {
+            content: "";
+            position: fixed;
+            inset: 0;
+            pointer-events: none;
+        }
+
+        /* Star field layer (now moving faster) */
+        body::before {
+            z-index: -2;
+            background-image:
+                radial-gradient(1px 1px at 10% 20%, rgba(255, 255, 255, 0.9), transparent 60%),
+                radial-gradient(1px 1px at 30% 80%, rgba(255, 255, 255, 0.7), transparent 60%),
+                radial-gradient(1px 1px at 70% 30%, rgba(255, 255, 255, 0.85), transparent 60%),
+                radial-gradient(1px 1px at 90% 60%, rgba(255, 255, 255, 0.75), transparent 60%),
+                radial-gradient(1px 1px at 50% 50%, rgba(255, 255, 255, 0.7), transparent 60%),
+                radial-gradient(2px 2px at 15% 50%, rgba(255, 255, 255, 0.9), transparent 60%),
+                radial-gradient(2px 2px at 60% 10%, rgba(255, 255, 255, 0.8), transparent 60%),
+                radial-gradient(1.5px 1.5px at 80% 85%, rgba(255, 255, 255, 0.9), transparent 60%);
+            background-repeat: repeat;
+            background-size: 300px 300px;
+            /* FAST movement: shorter duration + ज्यादा distance */
+            animation: starsMove 18s linear infinite;
+        }
+
+        /* Galaxy / nebula glow layer (deepest) */
+        body::after {
+            z-index: -3;
+            background-image:
+                radial-gradient(circle at 20% 20%, rgba(147, 112, 219, 0.35) 0, transparent 60%),
+                radial-gradient(circle at 80% 30%, rgba(0, 191, 255, 0.35) 0, transparent 60%),
+                radial-gradient(circle at 50% 80%, rgba(255, 105, 180, 0.25) 0, transparent 60%);
+            mix-blend-mode: screen;
+            animation: galaxyFloat 140s linear infinite alternate; /* galaxy same slow & smooth */
+        }
+
+        @keyframes starsMove {
+            0% {
+                transform: translate3d(0, 0, 0);
+                opacity: 0.9;
+            }
+            25% {
+                transform: translate3d(-150px, 60px, 0);
+                opacity: 0.8;
+            }
+            50% {
+                transform: translate3d(-300px, 120px, 0);
+                opacity: 0.7;
+            }
+            75% {
+                transform: translate3d(-450px, 180px, 0);
+                opacity: 0.8;
+            }
+            100% {
+                transform: translate3d(-600px, 240px, 0);
+                opacity: 0.9;
+            }
+        }
+
+        @keyframes galaxyFloat {
+            0% {
+                transform: translate3d(0, 0, 0) scale(1);
+            }
+            50% {
+                transform: translate3d(25px, -15px, 0) scale(1.04);
+            }
+            100% {
+                transform: translate3d(0, 0, 0) scale(1);
+            }
+        }
+
+        h1, h2, h3 {
+            color: var(--primary-color);
+            font-family: var(--font-family-heading);
+            font-weight: 700;
+            margin-bottom: 0.5em;
+        }
+
+        h1 {
+            font-size: 4rem; /* Larger H1 */
+            text-shadow: 0 0 15px rgba(255, 215, 0, 0.7); /* Subtle glow for H1 */
+        }
+
+        h2 {
+            font-size: 3rem; /* Larger H2 */
+            text-align: center;
+            padding-top: 20px;
+            margin-bottom: 1em;
+            position: relative;
+        }
+
+        h2::after { /* Underline effect for H2 */
+            content: '';
+            position: absolute;
+            left: 50%;
+            bottom: -10px;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 3px;
+            background-color: var(--secondary-color);
+            border-radius: 5px;
+        }
+
+        section {
+            padding: 100px 5%; /* More vertical padding */
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            opacity: 0;
+            transform: translateY(30px); 
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out; 
+            position: relative;
+            overflow: hidden;
+        }
+
+        .section-visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .container {
+            max-width: 1200px;
+            width: 100%;
+            z-index: 1;
+        }
+
+        /* --- HEADER & NAVIGATION --- */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: rgba(5, 5, 18, 0.96);
+            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.7);
+            z-index: 1000;
+            padding: 18px 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            backdrop-filter: blur(8px);
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            text-decoration: none;
+            letter-spacing: 1px;
+            transition: color 0.3s ease;
+        }
+        .logo:hover {
+            color: #fff;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+        }
+
+        nav ul li a {
+            color: var(--text-color);
+            text-decoration: none;
+            font-weight: 600;
+            padding: 10px 18px;
+            transition: color 0.3s ease, background-color 0.3s ease, transform 0.2s ease;
+            border-radius: 8px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        nav ul li a::before { 
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background-color: var(--primary-color);
+            transform: translateX(-100%);
+            transition: transform 0.3s ease-out;
+        }
+
+        nav ul li a:hover::before {
+            transform: translateX(0);
+        }
+
+        nav ul li a:hover {
+            color: var(--primary-color);
+            background-color: rgba(255, 215, 0, 0.08);
+            transform: translateY(-2px);
+        }
+
+        /* Mobile Menu Toggle */
+        .menu-toggle {
+            display: none;
+            font-size: 2.2rem;
+            cursor: pointer;
+            color: var(--primary-color);
+            transition: transform 0.3s ease;
+        }
+        .menu-toggle:hover {
+            transform: scale(1.1);
+        }
+
+        /* --- BUTTON STYLES --- */
+        .btn {
+            display: inline-block;
+            padding: 15px 35px;
+            background-color: var(--primary-color);
+            color: var(--dark-bg);
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 1.2rem;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+            box-shadow: 0 8px 25px rgba(255, 215, 0, 0.5);
+            letter-spacing: 0.5px;
+        }
+
+        .btn:hover {
+            background-color: #e6c200;
+            transform: translateY(-4px);
+            box-shadow: 0 12px 30px rgba(255, 215, 0, 0.8);
+        }
+
+        .btn.secondary {
+            background-color: var(--secondary-color);
+            color: var(--text-color);
+            box-shadow: 0 5px 15px rgba(147, 112, 219, 0.4);
+        }
+
+        .btn.secondary:hover {
+            background-color: #8361c9;
+            box-shadow: 0 8px 20px rgba(147, 112, 219, 0.6);
+        }
+        
+        /* --- PROFILE CARD (About Section Component) --- */
+        .profile-card {
+            background: linear-gradient(135deg, var(--card-bg), #20203f);
+            border: 1px solid rgba(255, 215, 0, 0.4);
+            border-radius: 20px;
+            padding: 40px;
+            margin-bottom: 50px;
+            text-align: center;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.6);
+            max-width: 450px;
+            margin-left: auto;
+            margin-right: auto;
+            position: relative;
+            overflow: hidden;
+            backdrop-filter: blur(5px);
+        }
+
+        .profile-card h3 {
+            color: var(--primary-color);
+            margin-top: 20px;
+            margin-bottom: 8px;
+            font-size: 2rem;
+        }
+
+        .profile-card p.title {
+            color: var(--secondary-color);
+            font-style: italic;
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+        }
+
+        .profile-dp {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            background-color: #3e3e68;
+            border: 5px solid var(--primary-color);
+            margin: 0 auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            box-shadow: 0 0 20px rgba(255, 215, 0, 0.5);
+        }
+        
+        .profile-dp img, .insta-dp img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        /* --- HERO SECTION --- */
+        #home {
+            text-align: center;
+            padding-top: 180px;
+            min-height: 100vh;
+        }
+
+        #home h1 {
+            font-size: 4.5rem; 
+            margin-bottom: 0.3em;
+        }
+
+        #home p {
+            font-size: 1.7rem;
+            color: #ddd;
+            margin-bottom: 50px;
+            max-width: 800px;
+            line-height: 1.4;
+        }
+
+        /* --- ABOUT SECTION --- */
+        #about .content-wrapper {
+            display: flex;
+            gap: 60px;
+            align-items: flex-start;
+            text-align: left;
+        }
+
+        #about .text-content {
+            flex-grow: 1;
+        }
+
+        #about .bullet-points {
+            list-style: none;
+            margin-top: 30px;
+        }
+
+        #about .bullet-points li {
+            margin-bottom: 15px;
+            padding-left: 30px;
+            position: relative;
+            color: var(--text-color);
+            font-size: 1.1rem;
+        }
+
+        #about .bullet-points li::before {
+            content: '🌟';
+            position: absolute;
+            left: 0;
+            color: var(--primary-color);
+            font-size: 1.4em;
+            line-height: 1;
+        }
+
+        /* --- SERVICES SECTION --- */
+        .service-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+            margin-top: 50px;
+        }
+
+        .service-card {
+            background-color: var(--card-bg);
+            border-radius: 15px;
+            padding: 30px;
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+            border: 1px solid rgba(255, 215, 0, 0.2);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .service-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.6);
+            border-color: var(--primary-color);
+        }
+
+        .service-card .icon {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            color: var(--secondary-color);
+            text-shadow: 0 0 10px var(--secondary-color);
+        }
+
+        .service-card h3 {
+            color: var(--primary-color);
+            font-size: 1.6rem;
+            margin-bottom: 10px;
+        }
+
+        .service-card .price-info {
+            color: #aaa;
+            margin-top: 15px;
+            font-style: italic;
+            font-size: 1rem;
+        }
+        
+        /* --- PRICING SECTION --- */
+        .pricing-grid {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            margin-top: 50px;
+            flex-wrap: wrap;
+        }
+
+        .package-card {
+            background: var(--card-bg);
+            border: 2px solid var(--secondary-color);
+            border-radius: 15px;
+            padding: 35px;
+            text-align: center;
+            width: 320px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .package-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.7);
+        }
+
+        .package-card.premium {
+            border-color: var(--primary-color);
+            transform: scale(1.08) translateY(-10px);
+            box-shadow: 0 20px 50px rgba(255, 215, 0, 0.8);
+        }
+
+        .package-card.premium:hover {
+            transform: scale(1.1) translateY(-15px);
+            box-shadow: 0 25px 60px rgba(255, 215, 0, 1);
+        }
+
+        .package-card h3 {
+            font-size: 2rem;
+            margin-bottom: 15px;
+        }
+
+        .package-card .price {
+            font-size: 3.5rem;
+            color: var(--primary-color);
+            font-weight: 700;
+            margin-bottom: 15px;
+            text-shadow: 0 0 10px rgba(255, 215, 0, 0.8);
+        }
+
+        .package-card ul {
+            list-style: none;
+            text-align: left;
+            margin: 25px 0;
+            font-size: 1.05rem;
+        }
+
+        .package-card ul li {
+            padding: 8px 0;
+            border-bottom: 1px dashed #333;
+            display: flex;
+            align-items: center;
+        }
+
+        .package-card ul li::before {
+            content: '✓';
+            color: var(--primary-color);
+            margin-right: 10px;
+            font-weight: bold;
+        }
+
+        .package-card .duration {
+            color: var(--secondary-color);
+            font-weight: 600;
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+        }
+
+        .package-note {
+            text-align: center;
+            margin-top: 50px;
+            font-size: 1rem;
+            color: #ccc;
+            background-color: rgba(21, 21, 43, 0.7);
+            padding: 15px 25px;
+            border-radius: 10px;
+            border: 1px solid rgba(147, 112, 219, 0.3);
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        /* --- BOOKING/CONTACT SECTION --- */
+        #book {
+            min-height: auto;
+            padding-bottom: 100px;
+        }
+        .booking-form {
+            background-color: var(--card-bg);
+            padding: 50px;
+            border-radius: 15px;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.6);
+            max-width: 650px;
+            margin-top: 50px;
+            width: 100%;
+            border: 1px solid rgba(255, 215, 0, 0.3);
+            backdrop-filter: blur(5px);
+        }
+
+        .form-group {
+            margin-bottom: 25px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: 600;
+            color: var(--primary-color);
+            font-size: 1.1rem;
+        }
+
+        .form-group input[type="text"],
+        .form-group input[type="date"],
+        .form-group select {
+            width: 100%;
+            padding: 14px;
+            border-radius: 8px;
+            border: 1px solid #444;
+            background-color: #2a2a4b;
+            color: var(--text-color);
+            font-size: 1.1rem;
+        }
+
+        .radio-group {
+            display: flex;
+            gap: 30px;
+            margin-top: 15px;
+        }
+
+        .radio-group label {
+            display: inline-flex;
+            align-items: center;
+            font-weight: 400;
+            color: var(--text-color);
+            cursor: pointer;
+            font-size: 1.1rem;
+        }
+
+        .radio-group input[type="radio"] {
+            margin-right: 10px;
+            accent-color: var(--primary-color);
+            transform: scale(1.2);
+        }
+        
+        .whatsapp-note {
+            margin-top: 20px;
+            font-size: 1rem;
+            color: var(--secondary-color);
+            text-align: center;
+        }
+
+        /* --- INSTAGRAM SECTION --- */
+        #instagram {
+            min-height: auto;
+            padding-top: 60px;
+        }
+        .instagram-card {
+            background: linear-gradient(45deg, #405de6, #833ab4, #c135a5, #fd1d1d, #feda75);
+            padding: 50px;
+            border-radius: 20px;
+            text-align: center;
+            max-width: 400px;
+            margin-top: 40px;
+            color: white;
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.7);
+        }
+
+        .insta-dp {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            background-color: white;
+            border: 3px solid white;
+            margin: 0 auto 15px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+        }
+
+        .instagram-card h3 {
+            color: white;
+            margin-bottom: 5px;
+        }
+
+        .instagram-card p {
+            font-style: italic;
+            margin-bottom: 20px;
+        }
+        
+        /* --- TESTIMONIALS SECTION --- */
+        .testimonial-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .testimonial-card {
+            background-color: var(--card-bg);
+            border-left: 5px solid var(--secondary-color);
+            border-radius: 8px;
+            padding: 25px;
+            font-style: italic;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        .testimonial-card .client-name {
+            font-weight: 700;
+            color: var(--primary-color);
+            font-style: normal;
+            display: block;
+            text-align: right;
+        }
+        
+        /* --- FOOTER --- */
+        footer {
+            text-align: center;
+            padding: 30px 5%;
+            border-top: 1px solid #222;
+            background-color: #050510;
+            font-size: 0.9rem;
+            color: #aaa;
+        }
+        
+        /* --- MEDIA QUERIES (Responsiveness) --- */
+        @media (max-width: 992px) {
+            #about .content-wrapper {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+        }
+
+        @media (max-width: 768px) {
+            h1 { font-size: 3rem; }
+            h2 { font-size: 2.2rem; }
+            section { padding: 60px 5%; }
+            #home { padding-top: 120px; }
+
+            nav ul {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 75px;
+                left: 0;
+                width: 100%;
+                background-color: rgba(5, 5, 18, 0.97);
+                box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+                padding: 20px 0;
+            }
+            nav ul.active {
+                display: flex;
+            }
+            .menu-toggle {
+                display: block;
+            }
+            
+            .pricing-grid {
+                flex-direction: column;
+                align-items: center;
+            }
+            .package-card {
+                width: 90%;
+            }
+            
+            .package-card.premium {
+                transform: none;
+            }
+            
+            .package-card.premium:hover {
+                 transform: scale(1.03);
+            }
+
+            .btn {
+                width: 100%;
+                text-align: center;
+            }
+            
+            #home h1 {
+                font-size: 3rem;
+            }
+            
+            #home p {
+                font-size: 1.3rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ⭐ Transparent fast-moving stardust layer -->
+    <div class="texture-stars"></div>
+
+    <header>
+        <a href="#home" class="logo">Rishabh Singh <span>🌟</span></a>
+        <nav>
+            <ul id="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#pricing">Pricing</a></li>
+                <li><a href="#book">Book Now</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="menu-toggle" id="menu-toggle">☰</div>
+    </header>
+
+    <section id="home" class="section-visible">
+        <div class="container">
+            <h1>Your Cosmic Blueprint Awaits: Decode Destiny with Rishabh Singh</h1>
+            <p>Unlocking the celestial secrets of your <strong>Kundli</strong> to guide your life, career, and relationships with precision.</p>
+            <a href="https://wa.me/919335006496?text=Hi%20Rishabh%20Singh%2C%20I%20want%20an%20astrology%20consultation." target="_blank" class="btn">
+                Book Consultation on WhatsApp 📞
+            </a>
+        </div>
+    </section>
+
+    <hr>
+
+    <section id="about">
+        <div class="container">
+            <h2>About Rishabh Singh</h2>
+            
+            <div class="content-wrapper">
+                
+                <div class="profile-card">
+                    <div class="profile-dp">
+                        <img src="reshab.jpg" alt="Rishabh Singh Profile Picture">
+                    </div>
+                    <h3>Rishabh Singh</h3>
+                    <p class="title">Astrologer & Spiritual Guide</p>
+                    <p style="font-size: 0.9rem; margin-top: 20px; color: #ccc;">
+                        Rishabh is an experienced and compassionate astrologer specializing in a blend of Vedic Astrology, <strong>Kundli analysis</strong>, and <strong>Numerology</strong>. His approach focuses on providing practical, life-changing guidance in areas like career, finance, and relationship dynamics, helping clients achieve clarity and peace of mind.
+                    </p>
+                </div>
+
+                <div class="text-content">
+                    <p style="margin-bottom: 20px;">
+                        Rishabh's practice is rooted in ancient wisdom combined with a modern, non-judgmental approach. He believes that astrology is a powerful tool for <strong>self-discovery</strong> and problem-solving, not just fortune-telling. He utilizes precise <strong>Kundli readings</strong> to identify life patterns and offers actionable remedies.
+                    </p>
+                    <p style="margin-bottom: 20px;">
+                        His core focus is on <strong>holistic life guidance</strong>, ensuring you receive clarity on your past, present, and potential future, empowering you to make informed decisions for a happier, more fulfilling life.
+                    </p>
+                    <ul class="bullet-points">
+                        <li>Personalized Kundli & Horoscope readings</li>
+                        <li>Career and finance guidance based on planetary positions</li>
+                        <li>Relationship & marriage compatibility analysis</li>
+                        <li>Vastu & name numerology suggestions for prosperity</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <hr>
+
+    <section id="services">
+        <div class="container">
+            <h2>Astrology Services</h2>
+            <div class="service-grid">
+                
+                <div class="service-card">
+                    <div class="icon">🪐</div>
+                    <h3>Kundli Analysis</h3>
+                    <p>Detailed reading of your birth chart (Janma Kundli) to understand planetary influences and life path.</p>
+                    <p class="price-info">Starting from ₹500</p>
+                </div>
+                
+                <div class="service-card">
+                    <div class="icon">❤️</div>
+                    <h3>Relationship & Marriage Matching</h3>
+                    <p>Comprehensive Gun Milan and compatibility analysis for a harmonious and lasting partnership.</p>
+                    <p class="price-info">Starting from ₹200</p>
+                </div>
+                
+                <div class="service-card">
+                    <div class="icon">💼</div>
+                    <h3>Career & Business Guidance</h3>
+                    <p>Identify the best professional path, timing for investments, and business strategies based on your chart.</p>
+                    <p class="price-info">Starting from ₹500</p>
+                </div>
+                
+                <div class="service-card">
+                    <div class="icon">🔢</div>
+                    <h3>Numerology & Lucky Name</h3>
+                    <p>Analysis of your name, date of birth, and lucky numbers for better vibration and success.</p>
+                    <p class="price-info">Starting from ₹200</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <hr>
+
+    <section id="pricing">
+        <div class="container">
+            <h2>Consultation Packages</h2>
+            <div class="pricing-grid">
+                
+                <div class="package-card">
+                    <h3>Numerology & Lucky Name</h3>
+                    <p class="duration">30 min Live Session</p>
+                    <p class="price">₹200</p>
+                    <p>Focus on 2–3 key questions (e.g., career or relationship).</p>
+                    <ul>
+                        <li>Basic Birth Chart Overview</li>
+                        <li>Focus on 1 Major Area</li>
+                        <li>Instant Remedies & Tips</li>
+                        <li>❌ Detailed Predictions</li>
+                    </ul>
+                    <a href="https://wa.me/919335006496?text=Hi%20Rishabh%20Singh%2C%20I%20want%20to%20book%20the%20Basic%20Kundli%20Reading%20package." target="_blank" class="btn secondary">Book Now</a>
+                </div>
+                
+                <div class="package-card premium">
+                    <h3>Premium Detailed Consultation</h3>
+                    <p class="duration">60 min In-Depth Session</p>
+                    <p class="price">₹500</p> 
+                    <p>A complete life reading, covering all major areas and detailed remedies.</p>
+                    <ul>
+                        <li>Comprehensive Life Analysis</li>
+                        <li>Career, Finance & Relationship</li>
+                        <li>Personalised Gemstone/Mantra Suggestions</li>
+                        <li>Follow-up Questions (Limited)</li>
+                    </ul>
+                    <a href="https://wa.me/919335006496?text=Hi%20Rishabh%20Singh%2C%20I%20want%20to%20book%20the%20Premium%20Detailed%20Consultation%20package." target="_blank" class="btn">Book Now</a>
+                </div>
+                
+                <div class="package-card">
+                    <h3>Compatibility Session</h3>
+                    <p class="duration">45 min Session for Two</p>
+                    <p class="price">₹300</p>
+                    <p>Analyze two birth charts for marriage, business, or general partnership.</p>
+                    <ul>
+                        <li>Horoscope Matching (Gun Milan)</li>
+                        <li>Strengths & Weaknesses of Relationship</li>
+                        <li>Guidance for Better Harmony</li>
+                        <li>❌ Individual Life Predictions</li>
+                    </ul>
+                    <a href="https://wa.me/919335006496?text=Hi%20Rishabh%20Singh%2C%20I%20want%20to%20book%20the%20Compatibility%20Session%20package." target="_blank" class="btn secondary">Book Now</a>
+                </div>
+
+            </div>
+            
+            <p class="package-note">
+                Prices shown are the <strong>You Pay Price</strong> and are indicative. Final price will be confirmed on WhatsApp based on the complexity of your requirements.
+            </p>
+        </div>
+    </section>
+
+    <hr>
+
+    <section id="book" class="full-screen-off">
+        <div class="container">
+            <h2>Book Your Session</h2>
+            <form id="bookingForm" class="booking-form">
+                <div class="form-group">
+                    <label for="name">Your Name:</label>
+                    <input type="text" id="name" name="name" required placeholder="Enter your full name">
+                </div>
+                <div class="form-group">
+                    <label for="dob">Date of Birth:</label>
+                    <input type="date" id="dob" name="dob" required>
+                </div>
+                <div class="form-group">
+                    <label for="pob">Place of Birth:</label>
+                    <input type="text" id="pob" name="pob" required placeholder="City, State, Country">
+                </div>
+                <div class="form-group">
+                    <label for="prefDate">Preferred Date for Consultation:</label>
+                    <input type="date" id="prefDate" name="prefDate" required>
+                </div>
+                <div class="form-group">
+                    <label for="budget">Approx Budget / Price Range (₹):</label>
+                    <input type="text" id="budget" name="budget" placeholder="e.g., ₹1000 - ₹2500">
+                </div>
+                <div class="form-group">
+                    <label>Are you okay with the consultation price range?</label>
+                    <div class="radio-group">
+                        <label><input type="radio" name="priceOk" value="Yes" required> Yes</label>
+                        <label><input type="radio" name="priceOk" value="No"> No</label>
+                    </div>
+                </div>
+                <button type="submit" class="btn" style="width: 100%;">Send Request on WhatsApp</button>
+                <p class="whatsapp-note"><strong>Note:</strong> We will contact you on WhatsApp to confirm the booking details.</p>
+            </form>
+        </div>
+    </section>
+
+    <hr>
+
+    <section id="instagram">
+        <div class="container" style="text-align: center;">
+            <h2>Follow on Instagram</h2>
+            <div class="instagram-card">
+                <div class="insta-dp">
+                    <img src="reshab.jpg" alt="Instagram Profile Picture">
+                </div>
+                <h3>Rishabh Singh</h3>
+                <p>Instagram: <strong>@_the_rishabhh</strong></p>
+                <a href="https://www.instagram.com/_the_rishabhh?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" class="btn secondary" style="background-color: white; color: #c135a5; font-size: 1rem;">
+                    View Instagram Profile
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <hr>
+    
+    <section id="contact">
+        <div class="container">
+            <h2>What Clients Say</h2>
+            <div class="testimonial-grid">
+                
+                <div class="testimonial-card">
+                    <p>"The Kundli analysis was incredibly accurate and detailed. Rishabh Singh not only predicted my challenges but also gave practical, easy-to-follow remedies. Highly recommended for career guidance!"</p>
+                    <span class="client-name">- Aman K.</span>
+                </div>
+                
+                <div class="testimonial-card">
+                    <p>"I was skeptical at first, but the compatibility reading for my marriage was spot on. His calm and kind guidance helped us resolve a major long-standing issue. A genuine spiritual guide."</p>
+                    <span class="client-name">- Priya S.</span>
+                </div>
+                
+                <div class="testimonial-card">
+                    <p>"Rishabh's numerology suggestions for my new business name were a game-changer. I felt an immediate shift in energy. He offers premium insights with a truly humble approach."</p>
+                    <span class="client-name">- Rohan V.</span>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+
+    <hr>
+
+    <footer>
+        <p>“For astrology guidance and personalized consultations, contact on WhatsApp.”</p>
+        <p>
+            &copy; <span id="current-year"></span> Rishabh Singh – All Rights Reserved.
+        </p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // 1. Set Current Year in Footer
+            document.getElementById('current-year').textContent = new Date().getFullYear();
+
+            // 2. Mobile Menu Toggle
+            const menuToggle = document.getElementById('menu-toggle');
+            const navLinks = document.getElementById('nav-links');
+            
+            menuToggle.addEventListener('click', () => {
+                navLinks.classList.toggle('active');
+            });
+
+            // Close mobile menu when a link is clicked
+            navLinks.querySelectorAll('a').forEach(link => {
+                link.addEventListener('click', () => {
+                    if (navLinks.classList.contains('active')) {
+                        navLinks.classList.remove('active');
+                    }
+                });
+            });
+
+            // 3. Scroll Animation (Smooth appearance of sections)
+            const sections = document.querySelectorAll('section');
+            const observerOptions = {
+                root: null,
+                rootMargin: '0px',
+                threshold: 0.2 // Trigger when 20% of section is visible
+            };
+
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('section-visible');
+                        observer.unobserve(entry.target); 
+                    }
+                });
+            }, observerOptions);
+
+            sections.forEach(section => {
+                // Skip 'home' section as it should be visible immediately
+                if (section.id !== 'home') {
+                    observer.observe(section);
+                }
+            });
+
+            // 4. WhatsApp Form Submission Handler
+            const bookingForm = document.getElementById('bookingForm');
+            bookingForm.addEventListener('submit', function(e) {
+                e.preventDefault(); // Prevent default form submission
+
+                // Collect form data
+                const name = document.getElementById('name').value;
+                const dob = document.getElementById('dob').value;
+                const pob = document.getElementById('pob').value;
+                const prefDate = document.getElementById('prefDate').value;
+                const budget = document.getElementById('budget').value;
+                const priceOk = document.querySelector('input[name="priceOk"]:checked').value;
+
+                // Format the message
+                const message = `Name: ${name}\n\nDate of Birth: ${dob}\n\nPlace of Birth: ${pob}\n\nPreferred Date: ${prefDate}\n\nBudget: ${budget}\n\nPrice OK: ${priceOk}\n\n--- Consultation Request ---`;
+                
+                // URL encode the message
+                const encodedMessage = encodeURIComponent(message);
+
+                // WhatsApp API URL
+                const waUrl = `https://wa.me/919335006496?text=${encodedMessage}`;
+
+                // Open WhatsApp chat
+                window.open(waUrl, '_blank');
+            });
+        });
+    </script>
+</body>
+</html>
